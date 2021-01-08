@@ -23,7 +23,8 @@ This browser-oriented Javascript library aims at providing an embeddable interfa
 
 ### Moodle integration
 This software being self-sufficient, it is NOT a Moodle plugin. In order to integrate it into Moodle, we recommend using the Generico filter plugin (https://github.com/justinhunt/moodle-filter_generico). The Moodle administrator needs to create a Generico template (named, say "chartEmbedder"), configure it to import the bridge file via AMD, and define the template body to the following:
-	<div class='chartEmbeddingZone'></div>
+```<div class='chartEmbeddingZone'></div>```
+After that, users allowed to create questionnaires may use the following specific tag in question bodies ```{GENERICO:type=chartEmbedder}``` to make a chartGen area appear.
 
 ## Credits
 The following libraries are used under the hood (most dependencies are managed via AMD):
