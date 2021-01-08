@@ -18,13 +18,16 @@ This browser-oriented Javascript library aims at providing an embeddable interfa
 - Third-party dependencies: browserify_levenbergMarquardt.js and html2pdf.bundle.js
 - Internationalisation file: locales.js
 - Main implementation file: chart_generator.js
-- One of moodle_chartgen_bridge.js (for Moodle integration) or default_chartgen_bridge.js (for custom integration). Note that they will probably need to be adapted to fit into the targeted environment (even with regard to various Moodle versions which have different interface styles). Thus, the bridge file is the one to be invoked from the main interface and was designed to contain pretty much exactly what one might want to modify to customize the sytem integration, without interferring with the main "applicative" code.
+- One of moodle_chartgen_bridge.js (for Moodle integration) or default_chartgen_bridge.js (for custom integration). Note that they will probably need to be adapted to fit into the targeted environment (even with regard to various Moodle versions which have different interface styles). Thus, the bridge file is the one to be invoked from the main interface and was designed to contain pretty much exactly what one might want to modify to customize the system integration, without interferring with the main "applicative" code.
+
 *NB:* The example.html file is not needed for Moodle integration, it may be used as a reference for designing your own HTML container.
 
 ### Moodle integration
 This software being self-sufficient, it is NOT a Moodle plugin. In order to integrate it into Moodle, we recommend using the Generico filter plugin (https://github.com/justinhunt/moodle-filter_generico). The Moodle administrator needs to create a Generico template (named, say "chartEmbedder"), configure it to import the bridge file via AMD, and define the template body to the following:
+
 ```<div class='chartEmbeddingZone'></div>```
-After that, users allowed to create questionnaires may use the following specific tag in question bodies ```{GENERICO:type=chartEmbedder}``` to make a chartGen area appear.
+
+After that, users allowed to create questionnaires (e.g., teachers) may use the following specific tag in question bodies ```{GENERICO:type=chartEmbedder}``` to make a chartGen area appear in the form that will be shown to targeted users (e.g., students).
 
 ## Credits
 The following libraries are used under the hood (most dependencies are managed via AMD):
