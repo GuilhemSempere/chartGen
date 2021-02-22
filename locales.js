@@ -1,8 +1,7 @@
 require(["i18njs"], function(i18n) {
 	var en_locales = {
 	    'err': {
-	        'ie_incompatibility': 'Your web browser is not compatible with chart generator. Please use Firefox, Safari, Chrome, Edge or Opera.',
-	        'chrome87_incompatibility': 'Web browsers based on Chromium v87 are not compatible with chart generator. Please revert to a previous version, or switch to Firefox or Safari. Otherwise please contact an administrator.'
+	        'ie_incompatibility': 'Your web browser is not compatible with chart generator. Please use Firefox, Safari, Chrome, Edge or Opera.'
 	    },
 	    'label' : {
 			'number_of_charts' : "Number of charts",
@@ -33,8 +32,7 @@ require(["i18njs"], function(i18n) {
 
 	var fr_locales = {
 	    'err': {
-	        'ie_incompatibility': 'Votre navigateur est incompatible avec le générateur de graphes. Veuillez utiliser Firefox, Safari, Chrome, Edge or Opera.',
-	        'chrome87_incompatibility': "La version actuelle (v87) de votre navigateur ne permet pas d'utiliser le bouton d'export PDF. Veuillez passer si possible sous Firefox ou Safari. Sinon veuillez contacter le responsable de la session."
+	        'ie_incompatibility': 'Votre navigateur est incompatible avec le générateur de graphes. Veuillez utiliser Firefox, Safari, Chrome, Edge or Opera.'
 	    },
 	    'label' : {
 			'number_of_charts' : "Nombre de graphes",
