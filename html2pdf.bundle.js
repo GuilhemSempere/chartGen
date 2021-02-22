@@ -2,6 +2,8 @@
  * html2pdf.js v0.9.2
  * Copyright (c) 2020 Erik Koopmans
  * Released under the MIT License.
+ *
+ * with bugfix https://github.com/eKoopmans/html2pdf.js/issues/372#issuecomment-780430912
  */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -4163,8 +4165,9 @@ var inlineFormElement = function inlineFormElement(value, node, container, allow
         var wrapper = node.ownerDocument.createElement('html2canvaswrapper');
         (0, Util.copyCSSStyles)(node.ownerDocument.defaultView.getComputedStyle(node, null), wrapper);
         wrapper.style.position = 'absolute';
-        wrapper.style.left = container.bounds.left + 'px';
-        wrapper.style.top = container.bounds.top + 'px';
+	wrapper.style.left = wrapper.style.top = '';
+	wrapper.style.left = container.bounds.left + 'px';
+	wrapper.style.top = container.bounds.top + 'px';
         if (!allowLinebreak) {
             wrapper.style.whiteSpace = 'nowrap';
         }
