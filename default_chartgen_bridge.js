@@ -36,8 +36,5 @@ require(["i18njs", "chartGenerator", "locales"], function(i18n, cg) {
 		alert(i18n.get('err.ie_incompatibility'));
 		history.back();
 	}
-	else if (navigator.userAgent.indexOf(" Chrome/87.") > -1) {
-		alert(i18n.get('err.chrome87_incompatibility'));
-	}
 	cg.startChartEmbedding();
 });
