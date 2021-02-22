@@ -41,6 +41,5 @@ The following libraries are used under the hood (most dependencies are managed v
 
 
 ## Caveats
-	- Browsers based on Chromium v87 are not compatible with the PDF export functionality (all inputs and textareas appear blank)
 	- Safari shows textarea contents horizontally rather than vertically
 	- Values of X for which Y does not exist (e.g., Y=1/X and X=0) must be specified explicitly in the textareas (with a non-numeric value for Y) in order to let the system know it must skip them (otherwise it creates continuity on each side of the given X value)
